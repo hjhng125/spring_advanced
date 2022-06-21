@@ -6,17 +6,17 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class TraceV1 {
+public class Trace {
 
   private static final String START_PREFIX = "-->";
-  private static final String COMPLETE_PREFIX = "<--";
+  private static final String END_PREFIX = "<--";
   private static final String EXCEPTION_PREFIX = "<x-";
 
   public TraceStatus begin(String message) {
     TraceId traceId = TraceId.create();
     long startTimeMillis = System.currentTimeMillis();
 
-    log.info("[{}] {}{}", traceId, this.addSpace(START_PREFIX, traceId.level()), message);
+    log.info("[{}] {}{}", traceId.id(), this.addSpace(START_PREFIX, traceId.level()), message);
     return TraceStatus.builder()
         .traceId(traceId)
         .startTimeMillis(startTimeMillis)
@@ -38,7 +38,7 @@ public class TraceV1 {
     TraceId traceId = traceStatus.traceId();
 
     if (e == null) {
-      log.info("[{}] {}{} time={}ms", traceId.id(), addSpace(COMPLETE_PREFIX, traceId.level()), traceStatus.message(), resultTimeMillis);
+      log.info("[{}] {}{} time={}ms", traceId.id(), addSpace(END_PREFIX, traceId.level()), traceStatus.message(), resultTimeMillis);
     } else {
       log.info("[{}] {}{} time={}ms ex={}", traceId.id(), addSpace(EXCEPTION_PREFIX, traceId.level()), traceStatus.message(), resultTimeMillis, e.toString());
     }

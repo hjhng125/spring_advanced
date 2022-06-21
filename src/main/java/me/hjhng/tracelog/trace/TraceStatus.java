@@ -1,6 +1,7 @@
 package me.hjhng.tracelog.trace;
 
 import lombok.Builder;
+import me.hjhng.tracelog.trace.TraceId;
 
 public class TraceStatus {
 
