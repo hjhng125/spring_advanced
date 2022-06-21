@@ -22,7 +22,7 @@ public class OrderV2Service {
   public void orderItem(TraceId traceId, String itemId) {
     TraceStatus status = null;
     try {
-      status = trace.beginSync(traceId, "OrderV1Service.orderItem");
+      status = trace.beginSync(traceId, "OrderV2Service.orderItem");
       repository.save(status.traceId(), itemId);
       trace.end(status);
     } catch (Exception e) {

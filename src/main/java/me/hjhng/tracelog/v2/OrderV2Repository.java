@@ -19,7 +19,7 @@ public class OrderV2Repository {
   public void save(TraceId traceId, String itemId) {
     TraceStatus status = null;
     try {
-      status = trace.beginSync(traceId, "OrderV1Repository.save");
+      status = trace.beginSync(traceId, "OrderV2Repository.save");
       if (itemId.equals("ex")) {
         throw new IllegalStateException("예외 발생!");
       }
