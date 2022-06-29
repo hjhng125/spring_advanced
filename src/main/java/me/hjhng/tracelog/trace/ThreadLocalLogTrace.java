@@ -9,7 +9,7 @@ public class ThreadLocalLogTrace implements LogTrace {
   private static final String END_PREFIX = "<--";
   private static final String EXCEPTION_PREFIX = "<x-";
 
-  private ThreadLocal<TraceId> traceIdHolder = new ThreadLocal<>(); // traceId 동기화
+  private final ThreadLocal<TraceId> traceIdHolder = new ThreadLocal<>(); // traceId 동기화
 
   @Override
   public TraceStatus begin(String message) {
