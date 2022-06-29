@@ -19,7 +19,7 @@ public class OrderV3Repository {
   public void save(String itemId) {
     TraceStatus status = null;
     try {
-      status = trace.begin("OrderV2Repository.save");
+      status = trace.begin("OrderV3Repository.save");
       if (itemId.equals("ex")) {
         throw new IllegalStateException("예외 발생!");
       }
