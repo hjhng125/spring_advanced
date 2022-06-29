@@ -1,10 +1,9 @@
-package me.hjhng.tracelog.v4;
+package me.hjhng.tracelog.trace.v4;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import me.hjhng.tracelog.trace.LogTrace;
-import me.hjhng.tracelog.trace.TraceStatus;
 import me.hjhng.tracelog.trace.template.AbstractTemplate;
 
 @RestController

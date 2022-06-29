@@ -1,11 +1,10 @@
-package me.hjhng.tracelog.v3;
+package me.hjhng.tracelog.trace.v3;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import me.hjhng.tracelog.trace.LogTrace;
 import me.hjhng.tracelog.trace.TraceStatus;
-import me.hjhng.tracelog.trace.TraceV2;
 
 @RestController
 public class OrderV3Controller {

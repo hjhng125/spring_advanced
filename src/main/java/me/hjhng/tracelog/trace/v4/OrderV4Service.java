@@ -1,9 +1,8 @@
-package me.hjhng.tracelog.v4;
+package me.hjhng.tracelog.trace.v4;
 
 import org.springframework.stereotype.Service;
 
 import me.hjhng.tracelog.trace.LogTrace;
-import me.hjhng.tracelog.trace.TraceStatus;
 import me.hjhng.tracelog.trace.template.AbstractTemplate;
 
 @Service

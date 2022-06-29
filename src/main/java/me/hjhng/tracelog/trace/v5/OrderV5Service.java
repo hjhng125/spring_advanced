@@ -1,10 +1,9 @@
-package me.hjhng.tracelog.v5;
+package me.hjhng.tracelog.trace.v5;
 
 import org.springframework.stereotype.Service;
 
 import me.hjhng.tracelog.trace.LogTrace;
 import me.hjhng.tracelog.trace.callback.TraceTemplate;
-import me.hjhng.tracelog.trace.template.AbstractTemplate;
 
 @Service
 public class OrderV5Service {

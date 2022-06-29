@@ -1,25 +1,23 @@
-package me.hjhng.tracelog.v3;
+package me.hjhng.tracelog.trace.v1;
 
 import org.springframework.stereotype.Repository;
 
-import me.hjhng.tracelog.trace.LogTrace;
-import me.hjhng.tracelog.trace.TraceId;
+import me.hjhng.tracelog.trace.Trace;
 import me.hjhng.tracelog.trace.TraceStatus;
-import me.hjhng.tracelog.trace.TraceV2;
 
 @Repository
-public class OrderV3Repository {
+public class OrderV1Repository {
 
-  private final LogTrace trace;
+  private final Trace trace;
 
-  public OrderV3Repository(LogTrace trace) {
+  public OrderV1Repository(Trace trace) {
     this.trace = trace;
   }
 
   public void save(String itemId) {
     TraceStatus status = null;
     try {
-      status = trace.begin("OrderV3Repository.save");
+      status = trace.begin("OrderV1Repository.save");
       if (itemId.equals("ex")) {
         throw new IllegalStateException("예외 발생!");
       }

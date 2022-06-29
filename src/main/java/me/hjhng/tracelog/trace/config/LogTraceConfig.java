@@ -1,4 +1,4 @@
-package me.hjhng.tracelog.config;
+package me.hjhng.tracelog.trace.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

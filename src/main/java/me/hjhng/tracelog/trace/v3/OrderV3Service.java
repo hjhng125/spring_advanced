@@ -1,18 +1,18 @@
-package me.hjhng.tracelog.v1;
+package me.hjhng.tracelog.trace.v3;
 
 import org.springframework.stereotype.Service;
 
-import me.hjhng.tracelog.trace.Trace;
+import me.hjhng.tracelog.trace.LogTrace;
 import me.hjhng.tracelog.trace.TraceStatus;
 
 @Service
-public class OrderV1Service {
+public class OrderV3Service {
 
-  private final OrderV1Repository repository;
+  private final OrderV3Repository repository;
 
-  private final Trace trace;
+  private final LogTrace trace;
 
-  public OrderV1Service(OrderV1Repository repository, Trace trace) {
+  public OrderV3Service(OrderV3Repository repository, LogTrace trace) {
     this.repository = repository;
     this.trace = trace;
   }
@@ -20,7 +20,7 @@ public class OrderV1Service {
   public void orderItem(String itemId) {
     TraceStatus status = null;
     try {
-      status = trace.begin("OrderV1Service.orderItem");
+      status = trace.begin("OrderV3Service.orderItem");
       repository.save(itemId);
       trace.end(status);
     } catch (Exception e) {

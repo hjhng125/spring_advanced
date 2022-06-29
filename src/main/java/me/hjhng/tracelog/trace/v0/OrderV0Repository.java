@@ -1,4 +1,4 @@
-package me.hjhng.tracelog.v0;
+package me.hjhng.tracelog.trace.v0;
 
 import org.springframework.stereotype.Repository;
 

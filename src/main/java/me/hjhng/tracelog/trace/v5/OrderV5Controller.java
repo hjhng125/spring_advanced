@@ -1,12 +1,10 @@
-package me.hjhng.tracelog.v5;
+package me.hjhng.tracelog.trace.v5;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import me.hjhng.tracelog.trace.LogTrace;
-import me.hjhng.tracelog.trace.callback.TraceCallback;
 import me.hjhng.tracelog.trace.callback.TraceTemplate;
-import me.hjhng.tracelog.trace.template.AbstractTemplate;
 
 @RestController
 public class OrderV5Controller {
